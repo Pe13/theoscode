@@ -1,6 +1,5 @@
 TARGET := iphone:clang:16.5:14.0
 INSTALL_TARGET_PROCESSES = TheosCode
-THEOS_PACKAGE_SCHEME=rootless
 ARCHS = arm64 arm64e
 
 include $(THEOS)/makefiles/common.mk
