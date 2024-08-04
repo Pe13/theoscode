@@ -1,0 +1,58 @@
+{
+  "configurations": [
+    {
+      "name": "windows-gcc-x64",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "/home/pi/theos/include/iphone",
+        "/home/pi/theos/include",
+        "/home/pi/theos/vendor/include",
+        "/home/pi/theos/include/_fallback"
+      ],
+      "compilerPath": "/home/pi/theos/toolchain/linux/iphone/bin/clang++",
+
+      "cStandard": "${default}",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "windows-gcc-x64",
+      "compilerArgs": [
+        "-x", "objective-c",
+        "-c",
+        "-I/home/pi/theos/include/iphone",
+        "-I/home/pi/theos/include",
+        "-I/home/pi/theos/vendor/include",
+        "-I/home/pi/theos/include/_fallback",
+        "-include", "/home/pi/theos/Prefix.pch",
+        "-iquote", "/home/pi/iOS_apps/theoscode",
+        "-DTARGET_IPHONE=1",
+        "-O0",
+        "-Wall",
+        "-ggdb",
+        "-Wno-unused-command-line-argument",
+        "-Qunused-arguments",
+        "-Werror",
+        "-D", "THEOS_PACKAGE_INSTALL_PREFIX=\"\\\"\\\"\"",
+        "-isysroot", "\"/home/pi/theos/sdks/iPhoneOS16.5.sdk\"",
+        "-target", "arm64-apple-ios14.0",
+        "-resource-dir", "/home/pi/theos/toolchain/linux/iphone/bin/../lib/swift/clang",
+        "-fobjc-arc",
+        "-DDEBUG", "-O0",
+        "-DTHEOS_INSTANCE_NAME=\"\\\"TheosCode\\\"\"",
+        "-fmodules",
+        "-fcxx-modules",
+        "-fmodule-name=TheosCode",
+        "-fbuild-session-file=/home/pi/iOS_apps/theoscode/.theos/build_session",
+        "-fmodules-prune-after=345600",
+        "-fmodules-prune-interval=86400",
+        "-fmodules-validate-once-per-build-session",
+        "-arch", "arm64",
+        "-F/home/pi/theos/vendor/lib",
+        "-F/home/pi/theos/lib",
+        "-F/home/pi/theos/lib/iphone",
+        "-F/home/pi/theos/sdks/iPhoneOS16.5.sdk/System/Library/PrivateFrameworks",
+        "-F/home/pi/theos/vendor/lib/iphone/rootful",
+        "-F/home/pi/theos/lib/iphone/rootful"
+      ]
+    }
+  ],
+  "version": 4
+}
