@@ -12,10 +12,4 @@ TheosCode_FILES = $(wildcard *.mm)
 TheosCode_FRAMEWORKS = UIKit CoreGraphics
 TheosCode_OBJCCFLAGS = -Iinclude -fobjc-arc
 
-after-package::
-	mv packages/* $(HOME)/iPad_root/TrollStore_IPAs/$(APPLICATION_NAME)
-
-wipe-packages:
-	rm -v $(HOME)/iPad_root/TrollStore_IPAs/$(APPLICATION_NAME)/*
-
 include $(THEOS_MAKE_PATH)/application.mk
