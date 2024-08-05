@@ -19,7 +19,9 @@
                 forColumn:UISplitViewControllerColumnPrimary];
   [self setViewController:(UIViewController *)rightViewController
                 forColumn:UISplitViewControllerColumnSecondary];
-
+	
+  [self showColumn:UISplitViewControllerColumnPrimary];
+  [self showColumn:UISplitViewControllerColumnSecondary];
 }
 
 @end
