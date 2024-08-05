@@ -1,7 +1,8 @@
 TARGET := iphone:clang:16.5:14.0
 INSTALL_TARGET_PROCESSES = TheosCode
 ARCHS = arm64
-PACKAGE_FORMAT = ipa
+# PACKAGE_FORMAT = ipa
+THEOS_PACKAGE_SCHEME=roothide 
 
 include $(THEOS)/makefiles/common.mk
 
