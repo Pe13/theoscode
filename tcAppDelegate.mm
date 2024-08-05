@@ -17,12 +17,11 @@
     configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession
     options:(UISceneConnectionOptions *)options {
 
-  UISceneConfiguration * out = [[UISceneConfiguration alloc] init];
+  UISceneConfiguration * configuration = [[UISceneConfiguration alloc] init];
 
-  out.sceneClass = NSClassFromString(@"UIWindowScene");
-  out.delegateClass = NSClassFromString(@"tcSceneDelegate");
+  configuration.delegateClass = tcSceneDelegate.class;
 
-  return out;
+  return configuration;
 }
 
 @end
