@@ -8,7 +8,7 @@
 
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  _mainScene = [[tcSceneDelegate alloc] init];
+  // _mainScene = [[tcSceneDelegate alloc] init];
 
   return YES;
 }
@@ -16,9 +16,7 @@
 - (UISceneConfiguration *)application:(UIApplication *)application
     configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession
     options:(UISceneConnectionOptions *)options {
-
   UISceneConfiguration * configuration = [[UISceneConfiguration alloc] init];
-
   configuration.delegateClass = tcSceneDelegate.class;
 
   return configuration;
