@@ -17,10 +17,7 @@
     UINavigationController *rightViewController = [[UINavigationController alloc]
             initWithRootViewController:[[tcRootViewController alloc] init]];
 
-    [splitViewController setViewController:(UIViewController *) leftViewController
-                  forColumn:UISplitViewControllerColumnPrimary];
-    [splitViewController setViewController:(UIViewController *) rightViewController
-                  forColumn:UISplitViewControllerColumnSecondary];
+    splitViewController.viewControllers = @[leftViewController, rightViewController];
 
     _rootViewController = [[UINavigationController alloc]
             initWithRootViewController:splitViewController];
