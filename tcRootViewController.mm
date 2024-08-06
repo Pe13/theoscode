@@ -9,9 +9,6 @@
     [super loadView];
 
     self.title = @"Root View Controller";
-
-//    [self showColumn:UISplitViewControllerColumnPrimary];
-//    [self showColumn:UISplitViewControllerColumnSecondary];
 }
 
 @end

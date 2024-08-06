@@ -1,5 +1,5 @@
 #import <UIKit/UIKit.h>
 
-@interface tcSecondaryViewController : UITableViewController
-@property(nonatomic, strong) NSMutableArray *objects;
+@interface tcSecondaryViewController : UIViewController <UITextViewDelegate>
+@property(nonatomic, strong) UITextView* textView;
 @end
