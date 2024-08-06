@@ -1,25 +1,25 @@
 #import "tcAppDelegate.h"
-#include <Foundation/NSObjCRuntime.h>
-#include <UIKit/UIWindowScene.h>
-#include <UIKit/UISceneSession.h>
 #import "tcSceneDelegate.h"
+#include <Foundation/NSObjCRuntime.h>
+#include <UIKit/UISceneSession.h>
+#include <UIKit/UIWindowScene.h>
 
 @implementation tcAppDelegate
 
 - (BOOL)application:(UIApplication *)application
-    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // _mainScene = [[tcSceneDelegate alloc] init];
+        didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // _mainScene = [[tcSceneDelegate alloc] init];
 
-  return YES;
+    return YES;
 }
 
 - (UISceneConfiguration *)application:(UIApplication *)application
-    configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession
-    options:(UISceneConnectionOptions *)options {
-  UISceneConfiguration * configuration = [[UISceneConfiguration alloc] init];
-  configuration.delegateClass = tcSceneDelegate.class;
+        configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession
+                                       options:(UISceneConnectionOptions *)options {
+    UISceneConfiguration *configuration = [[UISceneConfiguration alloc] init];
+    configuration.delegateClass = tcSceneDelegate.class;
 
-  return configuration;
+    return configuration;
 }
 
 @end
