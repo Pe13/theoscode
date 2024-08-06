@@ -25,8 +25,7 @@
 
     splitViewController.viewControllers = @[leftViewController, rightViewController];
 
-    _rootViewController = [[UINavigationController alloc]
-            initWithRootViewController:splitViewController];
+    _rootViewController = splitViewController;
 
     _window.rootViewController = _rootViewController;
     [_window makeKeyAndVisible];
