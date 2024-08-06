@@ -8,10 +8,23 @@
         willConnectToSession:(UISceneSession *)session
                      options:(UISceneConnectionOptions *)connectionOptions {
     _window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *) scene];
+
+    tcRootViewController* splitViewController = [[tcRootViewController alloc]
+            initWithStyle:UISplitViewControllerStyleDoubleColumn];
+
+    UINavigationController *leftViewController = [[UINavigationController alloc]
+            initWithRootViewController:[[tcRootViewController alloc] init]];
+    UINavigationController *rightViewController = [[UINavigationController alloc]
+            initWithRootViewController:[[tcRootViewController alloc] init]];
+
+    [splitViewController setViewController:(UIViewController *) leftViewController
+                  forColumn:UISplitViewControllerColumnPrimary];
+    [splitViewController setViewController:(UIViewController *) rightViewController
+                  forColumn:UISplitViewControllerColumnSecondary];
+
     _rootViewController = [[UINavigationController alloc]
-            initWithRootViewController:
-                    [[tcRootViewController alloc]
-                            initWithStyle:UISplitViewControllerStyleDoubleColumn]];
+            initWithRootViewController:splitViewController];
+
     _window.rootViewController = _rootViewController;
     [_window makeKeyAndVisible];
 }
