@@ -11,6 +11,8 @@
     _textView = [[UITextView alloc] initWithFrame:{} textContainer:nil];
     _textView.text = @"Hello world";
 
+    _textView.delegate = self;
+
     self.view = _textView;
 }
 
