@@ -12,4 +12,7 @@ TheosCode_FILES = $(wildcard *.mm)
 TheosCode_FRAMEWORKS = UIKit CoreGraphics
 TheosCode_OBJCCFLAGS = -Iinclude -fobjc-arc
 
+before-install::
+	sudo dpkg -r com.pe13.theoscode
+
 include $(THEOS_MAKE_PATH)/application.mk
