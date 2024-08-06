@@ -8,8 +8,10 @@
         willConnectToSession:(UISceneSession *)session
                      options:(UISceneConnectionOptions *)connectionOptions {
     _window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *) scene];
-    _rootViewController = [[tcRootViewController alloc]
-            initWithStyle:UISplitViewControllerStyleDoubleColumn];
+    _rootViewController = [[UINavigationController alloc]
+            initWithRootViewController:
+                    [[tcRootViewController alloc]
+                            initWithStyle:UISplitViewControllerStyleDoubleColumn]];
     _window.rootViewController = _rootViewController;
     [_window makeKeyAndVisible];
 }

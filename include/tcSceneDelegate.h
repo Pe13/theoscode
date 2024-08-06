@@ -4,6 +4,6 @@
 @interface tcSceneDelegate : UIResponder <UIWindowSceneDelegate>
 
 @property(nonatomic, strong) UIWindow *window;
-@property(nonatomic, strong) tcRootViewController *rootViewController;
+@property(nonatomic, strong) UINavigationController *rootViewController;
 
 @end
