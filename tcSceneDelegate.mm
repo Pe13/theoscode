@@ -7,9 +7,13 @@
 - (void)scene:(UIScene *)scene
         willConnectToSession:(UISceneSession *)session
                      options:(UISceneConnectionOptions *)connectionOptions {
-    _window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *) scene];
 
-    tcRootViewController* splitViewController = [[tcRootViewController alloc]
+    UIWindowScene *windowScene =
+            [[UIWindowScene alloc] initWithSession:session
+                                 connectionOptions:connectionOptions];
+    _window = [[UIWindow alloc] initWithWindowScene:windowScene];
+
+    tcRootViewController *splitViewController = [[tcRootViewController alloc]
             initWithStyle:UISplitViewControllerStyleDoubleColumn];
 
     UINavigationController *leftViewController = [[UINavigationController alloc]
