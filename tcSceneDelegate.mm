@@ -1,5 +1,7 @@
 #import "tcSceneDelegate.h"
 #import "tcRootViewController.h"
+#import "tcPrimaryViewController.h"
+#import "tcSecondaryViewController.h"
 #import <UIKit/UIKit.h>
 
 @implementation tcSceneDelegate
@@ -17,9 +19,9 @@
             initWithStyle:UISplitViewControllerStyleDoubleColumn];
 
     UINavigationController *leftViewController = [[UINavigationController alloc]
-            initWithRootViewController:[[tcRootViewController alloc] init]];
+            initWithRootViewController:[[tcPrimaryViewController alloc] init]];
     UINavigationController *rightViewController = [[UINavigationController alloc]
-            initWithRootViewController:[[tcRootViewController alloc] init]];
+            initWithRootViewController:[[tcSecondaryViewController alloc] init]];
 
     splitViewController.viewControllers = @[leftViewController, rightViewController];
 

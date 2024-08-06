@@ -1,7 +1,7 @@
 #import "tcRootViewController.h"
 #import <UIKit/UISplitViewController.h>
 
-#import "tcExampleViewController.h"
+#import "tcPrimaryViewController.h"
 
 @implementation tcRootViewController
 

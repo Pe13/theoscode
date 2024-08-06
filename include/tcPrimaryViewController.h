@@ -1,5 +1,5 @@
 #import <UIKit/UIKit.h>
 
-@interface tcExampleViewController : UITableViewController
+@interface tcPrimaryViewController : UITableViewController
 @property(nonatomic, strong) NSMutableArray *objects;
 @end
