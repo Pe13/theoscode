@@ -1,8 +1,6 @@
 #import "tcAppDelegate.h"
 #import "tcSceneDelegate.h"
-#include <Foundation/NSObjCRuntime.h>
-#include <UIKit/UISceneSession.h>
-#include <UIKit/UIWindowScene.h>
+#import "tcWindowScene.h"
 
 @implementation tcAppDelegate
 
@@ -16,10 +14,15 @@
 - (UISceneConfiguration *)application:(UIApplication *)application
         configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession
                                        options:(UISceneConnectionOptions *)options {
-    UISceneConfiguration *configuration = [[UISceneConfiguration alloc] init];
+    UISceneConfiguration *configuration = [[UISceneConfiguration alloc] initWithName:@"Theoscode main window" sessionRole:connectingSceneSession.role];
+    configuration.sceneClass = tcWindowScene.class;
     configuration.delegateClass = tcSceneDelegate.class;
 
     return configuration;
+}
+
+- (void)application:(UIApplication *)application didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
+
 }
 
 @end

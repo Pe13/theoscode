@@ -3,6 +3,6 @@
 
 @interface tcAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (nonatomic, strong) tcSceneDelegate *mainScene;
+@property (nonatomic, strong) UIWindow *window;
 
 @end
